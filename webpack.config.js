@@ -75,8 +75,8 @@ module.exports = {
 
 plugins: [
     new HtmlWebpackPlugin({
-        filename: './src/index.html',
-        template: 'template.html',
+        filename: 'index.html',  //配置后生成的文件
+        template: './src/index.html', //我们目录中的文件
         //如果需要显示title需要在title里面加那句代码。然后在这里写上我们标题里面要显示的内容
         title:"hello vue"
     })
