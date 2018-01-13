@@ -1,3 +1,8 @@
+//引入全局默认初始化样式
+import 'normalize.css';
+//引入我们自己的样式
+import './less/index.less'
+
 //1.导入第三方包
 import Vue from 'vue';
 import ElementUi from 'element-ui';
