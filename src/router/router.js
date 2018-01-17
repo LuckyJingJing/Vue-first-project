@@ -17,11 +17,11 @@ let childrenList=[
   //商品管理-> 内容管理
   {name:"goodsCtList",path:"goods/contents/list", component: GoodsCtList},
   {name:"goodsCtAdd",path:"goods/contents/add", component: GoodsCtAdd},
-  {name:"goodsCtEdit",path:"goods/contents/edit/id", component: GoodsCtEdit},
+  {name:"goodsCtEdit",path:"goods/contents/edit/:id", component: GoodsCtEdit},
   //商品管理-> 分类管理
   {name:"goodsCgList",path:"goods/category/list", component: GoodsCgList},
   {name:"goodsCgAdd",path:"goods/category/add", component: GoodsCgAdd},
-  {name:"goodsCgEdit",path:"goods/category/edit/id", component: GoodsCgEdit}
+  {name:"goodsCgEdit",path:"goods/category/edit/:id", component: GoodsCgEdit}
   
 ]
 //暴露

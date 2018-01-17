@@ -8,7 +8,7 @@
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item>login</el-dropdown-item>
         <!-- 默认情况下, 监听组件的事件都是监听组件自己emit发射的事件 -->
-        <!-- 如果要监听浏览器原生事件, 添加一个native修饰符即可 -->
+        <!-- 如果要监听浏览器原生事件, 添加一个native修饰符即可 ,判断是不是浏览器的原生事件主要是我们自己试了之后才知道，如果我们直接注册clcik事件不起作用的时候，就要加native，如果起作用的话就不需要加，没有明确的分什么是原生事件什么不是原生事件-->
         <el-dropdown-item @click.native="logout">logout</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
