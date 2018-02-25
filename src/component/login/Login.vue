@@ -57,11 +57,14 @@
         login(){
           this.$http.post(this.$api.login,this.ruleForm2).then(res=>{
             if(res.data.status == 0){
-              this.$alert("登陆成功");
-              this.$router.push({name:"admin"})
-            }else{
-              this.$alert(res.data.message)
-            }
+              // 使用了路由插件后, 组件实例就会拥有两个对象,
+              // $router代表路由实例, $route代表url对象,
+              // 我们这里通过$route对象拿取url中的信息, $router对象进行路由跳转等操作
+                let nextPage = this.$route.query.nextPage;
+                this.$router.push({ path: nextPage? nextPage: '/good/list' });
+              }else {
+                this.$alert(res.data.message);
+              }
           })
         },
         //这里面的形参formName就是在标签里面写注册的点击事件里面传的参数，这个参数是表单的名字，下面的这个代码this.$refs[formName]，就是获取我们的整个表单元素

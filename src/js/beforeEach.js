@@ -27,7 +27,7 @@ export default function(to,from,next){
     }else if(toUrl != "login" && flag == false){
       //满足条件表示用户没有登陆过那么，那么我们要跳转到登陆页面,并把当前页面通过url参数记录下来
       next({ name: "login" , query : {nextPage : to.fullPath } });  //fullpath是带参数的，path是不带参数的
-      next({ name: 'login', query: { nextPage: to.fullPath } });
+
     }else{
       //这里加一个else的判断是因为，无论如何这个next()都要被执行
       next();
